@@ -1,0 +1,19 @@
+{{>partials/header}}
+
+<fieldset>
+    <legend>Adicionar um novo usuário</legend>
+    <form method="POST" action="/newUser">
+        <input type="text" name="name" placeholder="Digite seu nome" /><br/><br/>
+        <input type="number" name="age" placeholder="Digite sua idade" /><br/><br/>
+        <input type="submit" value="Inserir usuário" />        
+    </form>
+</fieldset>
+
+<h2>Lista de usuários do banco</h2>
+<ul>
+    {{#users}}
+        <li>Nome: {{ name }} - idade: {{ age }}</li>
+    {{/users}}
+</ul>
+
+{{>partials/footer}}
